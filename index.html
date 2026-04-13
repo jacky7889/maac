@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>MAAC Kalkaji | Gaming, Animation, VFX, Graphic & Web Institute</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div class="loading-screen" id="loadingScreen">
+    <div class="loader-logo">
+        <img src="logo.png" alt="MAAC Logo" onerror="this.src='https://placehold.co/120x120/ffcd32/0b0c15?text=MAAC'">
+    </div>
+    <div class="loader-text">CREATING FUTURE ARTISTS</div>
+    <div class="loader-dots"><span></span><span></span><span></span></div>
+</div>
+
+<!-- Mouse Particle Canvas -->
+<canvas id="particleCanvas"></canvas>
+
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="logo.png" alt="Maac-Logo" onerror="this.src='https://placehold.co/60x60/ffcd32/0b0c15?text=MAAC'"></a></div>
+            <div class="menu-btn" id="menuBtn"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Slider -->
+    <section id="home" class="hero-slider">
+        <div class="swiper mainSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+                    <div class="slide-overlay"><div class="slide-content"><h2>Graphic Design <span style="color:#ffcd32;">Reimagined</span></h2><p>Master Photoshop, Illustrator, InDesign & create stunning brand identities that speak volumes.</p><a href="#courses" class="btn-primary">Explore Courses</a></div></div>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+                    <div class="slide-overlay"><div class="slide-content"><h2>Web & 3D <span style="color:#ffcd32;">Fusion</span></h2><p>Build immersive 3D websites with React, Three.js & modern frontend technologies.</p><a href="#courses" class="btn-primary">Start Now</a></div></div>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+                    <div class="slide-overlay"><div class="slide-content"><h2>VFX & <span style="color:#ffcd32;">Animation</span></h2><p>Create cinematic magic with Houdini, Nuke, After Effects & industry-standard compositing.</p><a href="#contact" class="btn-outline">Enroll Today</a></div></div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About <span>MAAC Kalkaji</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>India's Leading Creative & Tech Institute</h3>
+                    <p>Established in 2001, MAAC Kalkaji has trained over 10,000+ students in Animation, VFX, Gaming, Graphic Design, and Web Development. Our state-of-the-art labs and industry-expert faculty ensure you're job-ready from day one.</p>
+                    <p>We blend creativity with cutting-edge technology — from 3D sculpting to full-stack web development, every course is designed to meet global industry standards.</p>
+                    <div class="about-stats">
+                        <div class="stat"><h4>15+</h4><p>Years of Excellence</p></div>
+                        <div class="stat"><h4>10k+</h4><p>Students Placed</p></div>
+                        <div class="stat"><h4>50+</h4><p>Industry Partners</p></div>
+                    </div>
+                </div>
+                <div class="about-img"><img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800" alt="MAAC Campus"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="section">
+        <div class="container">
+            <h2 class="section-title">Master <span>Courses</span></h2>
+            <div class="course-grid">
+                <div class="course-card"><div class="course-icon"><i class="fas fa-pen-fancy"></i></div><h3>Graphic Design</h3><p>Photoshop, Illustrator, InDesign, branding + motion graphics.</p><span class="course-tag">6 months | Portfolio</span></div>
+                <div class="course-card"><div class="course-icon"><i class="fas fa-code"></i></div><h3>Web Development</h3><p>HTML/CSS, JS, React, Node.js & modern full stack.</p><span class="course-tag">8 months | Full Stack</span></div>
+                <div class="course-card"><div class="course-icon"><i class="fas fa-cube"></i></div><h3>3D & Motion</h3><p>Blender, Maya, 3D sculpting, lighting, animation.</p><span class="course-tag">7 months | Industry Ready</span></div>
+                <div class="course-card"><div class="course-icon"><i class="fas fa-film"></i></div><h3>VFX & Animation</h3><p>After Effects, Nuke, particle FX, compositing.</p><span class="course-tag">9 months | VFX Pro</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAAC Inner Activities Section -->
+    <section id="activities" class="section" style="background: #0c0e16;">
+        <div class="container">
+            <h2 class="section-title">Campus <span>Inner Activities</span></h2>
+            <p class="section-sub">Behind the scenes — workshops, guest lectures, studio sessions, and creative chaos! Click any activity to view fullscreen.</p>
+            <div class="activities-grid" id="activitiesGrid"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Student <span>Showcase</span></h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="3d">3D & Motion</button>
+                <button class="filter-btn" data-filter="vfx">VFX & Animation</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2 class="section-title">What <span>Our Students Say</span></h2>
+            <div class="swiper testimonialsSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="testimonial-card"><div class="testimonial-img" style="background-image: url('https://randomuser.me/api/portraits/women/68.jpg');"></div><i class="fas fa-quote-right"></i><p>"MAAC Kalkaji transformed my career! The VFX course was intense and industry-aligned. I'm now working at a top studio."</p><h4>Riya Sharma</h4><span>VFX Artist at DNEG</span></div></div>
+                    <div class="swiper-slide"><div class="testimonial-card"><div class="testimonial-img" style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg');"></div><i class="fas fa-quote-right"></i><p>"The web development program gave me hands-on React & Node skills. Got placed within 2 months!"</p><h4>Aryan Mehta</h4><span>Full Stack Developer</span></div></div>
+                    <div class="swiper-slide"><div class="testimonial-card"><div class="testimonial-img" style="background-image: url('https://randomuser.me/api/portraits/men/45.jpg');"></div><i class="fas fa-quote-right"></i><p>"Amazing faculty and 3D lab facilities. The portfolio I built here got me into a gaming company."</p><h4>Karan Joshi</h4><span>3D Artist at Ubisoft</span></div></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently <span>Asked Questions</span></h2>
+            <div class="faq-grid">
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-title">What are the eligibility criteria?</span><i class="fas fa-plus"></i></div><div class="faq-answer"><p>Any student who has completed 10+2 or equivalent can apply. For advanced courses, basic computer knowledge is recommended.</p></div></div>
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-title">Do you provide placement assistance?</span><i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes! We have a dedicated placement cell with 50+ industry partners. 90% of our students get placed within 3 months of course completion.</p></div></div>
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-title">What is the duration of courses?</span><i class="fas fa-plus"></i></div><div class="faq-answer"><p>Courses range from 6 to 12 months depending on the specialization. Weekend batches are also available.</p></div></div>
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span class="faq-title">Do you have online classes?</span><i class="fas fa-plus"></i></div><div class="faq-answer"><p>Yes, we offer both online and offline modes. Our hybrid learning model ensures flexibility for all students.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Let’s <span>Create Together</span></h2>
+            <div class="contact-flex">
+                <div class="contact-info">
+                    <h3><i class="fas fa-map-marker-alt"></i> MAAC Kalkaji</h3>
+                    <p>Ground Floor, 8, Guru Ravidas Marg, Balaji Estate, Kalkaji, New Delhi - 110019</p>
+                    <h3><i class="fas fa-phone-alt"></i> Contact</h3>
+                    <p>+91 928-923-4500</p>
+                    <h3><i class="fas fa-envelope"></i> Email</h3>
+                    <p>kalkaji@maacmail.com</p>
+                    <div style="margin-top: 32px;"><i class="fab fa-instagram fa-2x" style="margin-right: 20px; cursor:pointer;"></i><i class="fab fa-linkedin fa-2x" style="margin-right: 20px; cursor:pointer;"></i><i class="fab fa-dribbble fa-2x" style="cursor:pointer;"></i></div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group"><input type="text" id="fullname" placeholder="Full name *"></div>
+                        <div class="form-group"><input type="email" id="email" placeholder="Email address *"></div>
+                        <div class="form-group"><input type="tel" id="mobile" placeholder="Mobile Number *"></div>
+                        <div class="form-group"><select id="interest"><option>Graphic Design</option><option>Web Development</option><option>3D & Motion</option><option>VFX & Animation</option></select></div>
+                        <div class="form-group"><textarea id="message" rows="3" placeholder="Tell us about your creative goals... (min 10 words)"></textarea></div>
+                        <button type="submit" class="btn-primary btn-block">Request Info →</button>
+                    </form>
+                    <div id="formMsg" style="margin-top: 20px; text-align:center;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:25px;">
+            <div><h3 style="color:#ffcd32;">MAAC</h3><p>Inspiring the next generation of digital creators.</p></div>
+            <div><p>© 2025 MAAC — Graphic • Web • 3D • VFX</p></div>
+        </div>
+    </div>
+</footer>
+
+<div class="scroll-top" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></div>
+<div id="fullscreenLightbox" class="fullscreen-lightbox"><span class="close-lightbox" id="closeLightboxBtn">&times;</span><div class="nav-arrow prev-arrow" id="prevMediaBtn"><i class="fas fa-chevron-left"></i></div><div class="nav-arrow next-arrow" id="nextMediaBtn"><i class="fas fa-chevron-right"></i></div><div id="lightboxContent"></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    // Loading screen - 3 seconds
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.getElementById('loadingScreen').classList.add('hide');
+        }, 3000);
+    });
+
+    // Mouse Particle Canvas Effect
+    const canvas = document.getElementById('particleCanvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let mouseX = 0, mouseY = 0;
+    
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        for(let i = 0; i < 2; i++) {
+            createParticle();
+        }
+    });
+    
+    function createParticle() {
+        particles.push({
+            x: mouseX,
+            y: mouseY,
+            vx: (Math.random() - 0.5) * 2.5,
+            vy: (Math.random() - 0.5) * 2.5 - 1.5,
+            life: 1,
+            size: Math.random() * 4 + 2,
+            color: `hsl(${Math.random() * 30 + 30}, 100%, 60%)`
+        });
+    }
+    
+    function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for(let i = 0; i < particles.length; i++) {
+            let p = particles[i];
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fillStyle = p.color;
+            ctx.fill();
+            p.x += p.vx;
+            p.y += p.vy;
+            p.life -= 0.02;
+            p.size *= 0.98;
+            if(p.life <= 0 || p.y > canvas.height || p.x < 0 || p.x > canvas.width) {
+                particles.splice(i,1);
+                i--;
+            }
+        }
+        requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    // Swiper initialization
+    const mainSwiper = new Swiper('.mainSwiper', { 
+        loop: true, 
+        autoplay: { delay: 4000, disableOnInteraction: false }, 
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        pagination: { el: '.swiper-pagination', clickable: true }, 
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' } 
+    });
+    
+    const testimonialsSwiper = new Swiper('.testimonialsSwiper', { 
+        loop: true, 
+        autoplay: { delay: 4000 }, 
+        pagination: { el: '.swiper-pagination', clickable: true }, 
+        slidesPerView: 1, 
+        breakpoints: { 768: { slidesPerView: 2 } } 
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn?.addEventListener('click', () => navLinks.classList.toggle('show'));
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('show')));
+    
+    // Smooth scroll for anchor links with proper offset
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const target = document.querySelector(targetId);
+            if(target) {
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+    
+    // Scroll to top button
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => { scrollBtn.classList.toggle('show', window.scrollY > 300); });
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // FAQ Toggle with + to - icon change
+    window.toggleFaq = function(element) {
+        const answer = element.nextElementSibling;
+        const icon = element.querySelector('i');
+        element.classList.toggle('active');
+        answer.classList.toggle('show');
+        if(icon.classList.contains('fa-plus')) {
+            icon.classList.remove('fa-plus');
+            icon.classList.add('fa-minus');
+        } else {
+            icon.classList.remove('fa-minus');
+            icon.classList.add('fa-plus');
+        }
+    }
+
+    // Activities Data
+    const activitiesData = [
+        { title: "3D Sculpting Workshop", desc: "Industry experts teaching ZBrush & Maya techniques to students.", type: "image", mediaUrl: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "VFX Compositing Lab", desc: "Hands-on session with Nuke and After Effects on live projects.", type: "image", mediaUrl: "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "Web Dev Hackathon", desc: "24-hour coding challenge building interactive 3D websites.", type: "video", mediaUrl: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4", thumb: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "Guest Lecture Series", desc: "Renowned animators from Pixar & DNEG share insights.", type: "image", mediaUrl: "https://images.pexels.com/photos/5428836/pexels-photo-5428836.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/5428836/pexels-photo-5428836.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" }
+    ];
+    
+    // Projects Data
+    const projectsData = [
+        { title: "Neon City Poster", desc: "Vibrant typography", category: "graphic", type: "image", mediaUrl: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "3D Alien Creature", desc: "ZBrush sculpt", category: "3d", type: "image", mediaUrl: "https://images.pexels.com/photos/788714/pexels-photo-788714.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/788714/pexels-photo-788714.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "Portfolio 2025", desc: "React + GSAP", category: "web", type: "image", mediaUrl: "https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "VFX Destruction", desc: "Houdini smoke", category: "vfx", type: "image", mediaUrl: "https://images.pexels.com/photos/707582/pexels-photo-707582.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/707582/pexels-photo-707582.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "Motion Reel", desc: "After Effects", category: "vfx", type: "image", mediaUrl: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "3D Environment", desc: "Blender Unreal", category: "3d", type: "image", mediaUrl: "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "Brand Identity", desc: "Logo design", category: "graphic", type: "image", mediaUrl: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "E-Commerce UI", desc: "Figma to React", category: "web", type: "image", mediaUrl: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" }
+    ];
+
+    // Lightbox functionality
+    let currentMediaList = [], currentMediaIndex = 0;
+    const lightbox = document.getElementById('fullscreenLightbox');
+    const lightboxContent = document.getElementById('lightboxContent');
+    const closeBtn = document.getElementById('closeLightboxBtn');
+    const prevBtn = document.getElementById('prevMediaBtn');
+    const nextBtn = document.getElementById('nextMediaBtn');
+    
+    window.showMediaInLightbox = function(mediaList, index) {
+        currentMediaList = mediaList;
+        currentMediaIndex = index;
+        const media = currentMediaList[currentMediaIndex];
+        lightboxContent.innerHTML = '';
+        if (media.type === 'video') {
+            const video = document.createElement('video');
+            video.src = media.mediaUrl;
+            video.controls = true;
+            video.autoplay = true;
+            video.className = 'lightbox-video';
+            video.style.maxWidth = '88%';
+            video.style.maxHeight = '85%';
+            lightboxContent.appendChild(video);
+        } else {
+            const img = document.createElement('img');
+            img.src = media.mediaUrl;
+            img.className = 'lightbox-media';
+            img.alt = media.title;
+            lightboxContent.appendChild(img);
+        }
+        lightbox.classList.add('active');
+    }
+    
+    function nextMedia() { if(currentMediaList.length) { currentMediaIndex = (currentMediaIndex + 1) % currentMediaList.length; showMediaInLightbox(currentMediaList, currentMediaIndex); } }
+    function prevMedia() { if(currentMediaList.length) { currentMediaIndex = (currentMediaIndex - 1 + currentMediaList.length) % currentMediaList.length; showMediaInLightbox(currentMediaList, currentMediaIndex); } }
+    
+    closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+    lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.classList.remove('active'); });
+    nextBtn.addEventListener('click', nextMedia);
+    prevBtn.addEventListener('click', prevMedia);
+    document.addEventListener('keydown', (e) => {
+        if(!lightbox.classList.contains('active')) return;
+        if(e.key === 'ArrowRight') nextMedia();
+        if(e.key === 'ArrowLeft') prevMedia();
+        if(e.key === 'Escape') lightbox.classList.remove('active');
+    });
+
+    // Render Activities
+    const activitiesGrid = document.getElementById('activitiesGrid');
+    function renderActivities() {
+        activitiesGrid.innerHTML = '';
+        activitiesData.forEach((act, idx) => {
+            const card = document.createElement('div');
+            card.className = 'activity-card';
+            card.innerHTML = `<div class="activity-img" style="background-image: url('${act.thumb}');"></div><div class="activity-info"><h4>${act.title}</h4><p>${act.desc}</p><span class="activity-media-badge"><i class="fas ${act.type === 'video' ? 'fa-video' : 'fa-image'}"></i> Click to view ${act.type === 'video' ? 'video' : 'full image'}</span></div>`;
+            card.addEventListener('click', () => showMediaInLightbox(activitiesData, idx));
+            activitiesGrid.appendChild(card);
+        });
+    }
+    renderActivities();
+    
+    // Render Projects with filter
+    let currentFilter = "all";
+    const gridContainer = document.getElementById('projectsGrid');
+    function renderProjects() {
+        const filtered = currentFilter === "all" ? projectsData : projectsData.filter(p => p.category === currentFilter);
+        gridContainer.innerHTML = "";
+        filtered.forEach((proj, idx) => {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+            card.innerHTML = `<div class="project-img" style="background-image: url('${proj.thumb}');"></div><div class="project-info"><h4>${proj.title}</h4><p>${proj.desc}</p><span style="color:#ffcd32;"><i class="fas fa-expand-alt"></i> Click</span></div>`;
+            card.addEventListener('click', () => showMediaInLightbox(filtered, idx));
+            gridContainer.appendChild(card);
+        });
+    }
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        renderProjects();
+    }));
+    renderProjects();
+
+    // Form validation with real-time keyup validation
+    const nameInput = document.getElementById('fullname');
+    const emailInput = document.getElementById('email');
+    const mobileInput = document.getElementById('mobile');
+    const messageInput = document.getElementById('message');
+    const contactForm = document.getElementById('contactForm');
+    const msgDiv = document.getElementById('formMsg');
+    
+    function validateName() {
+        const name = nameInput.value.trim();
+        if(name.length >= 3) {
+            nameInput.classList.add('success');
+            nameInput.classList.remove('validation-error');
+            return true;
+        } else {
+            nameInput.classList.remove('success');
+            nameInput.classList.add('validation-error');
+            return false;
+        }
+    }
+    
+    function validateEmail() {
+        const email = emailInput.value.trim();
+        if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            emailInput.classList.add('success');
+            emailInput.classList.remove('validation-error');
+            return true;
+        } else {
+            emailInput.classList.remove('success');
+            emailInput.classList.add('validation-error');
+            return false;
+        }
+    }
+    
+    function validateMobile() {
+        const mobile = mobileInput.value.trim();
+        if(/^[0-9]{10}$/.test(mobile)) {
+            mobileInput.classList.add('success');
+            mobileInput.classList.remove('validation-error');
+            return true;
+        } else {
+            mobileInput.classList.remove('success');
+            mobileInput.classList.add('validation-error');
+            return false;
+        }
+    }
+    
+    function validateMessage() {
+        const message = messageInput.value.trim();
+        const wordCount = message.split(/\s+/).filter(w => w.length > 0).length;
+        if(wordCount >= 10) {
+            messageInput.classList.add('success');
+            messageInput.classList.remove('validation-error');
+            return true;
+        } else {
+            messageInput.classList.remove('success');
+            messageInput.classList.add('validation-error');
+            return false;
+        }
+    }
+    
+    nameInput?.addEventListener('keyup', validateName);
+    emailInput?.addEventListener('keyup', validateEmail);
+    mobileInput?.addEventListener('keyup', validateMobile);
+    messageInput?.addEventListener('keyup', validateMessage);
+    
+    nameInput?.addEventListener('blur', validateName);
+    emailInput?.addEventListener('blur', validateEmail);
+    mobileInput?.addEventListener('blur', validateMobile);
+    messageInput?.addEventListener('blur', validateMessage);
+    
+    function validateFormOnSubmit() {
+        return validateName() && validateEmail() && validateMobile() && validateMessage();
+    }
+    
+    contactForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if(validateFormOnSubmit()) {
+            msgDiv.innerHTML = '<span style="color:#00c851;">Form submitted successfully! We\'ll contact you soon.</span>';
+            contactForm.reset();
+            [nameInput, emailInput, mobileInput, messageInput].forEach(i => {
+                i.classList.remove('validation-error');
+                i.classList.remove('success');
+            });
+            setTimeout(() => msgDiv.innerHTML = '', 4000);
+        } else {
+            msgDiv.innerHTML = '<span style="color:#ff4444;">Please fill all fields correctly: Name(3+ chars), Valid Email, Mobile(10 digits), Message(min 10 words).</span>';
+        }
+    });
+</script>
+</body>
+</html>

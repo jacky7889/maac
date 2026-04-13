@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>MAAC Kalkaji | Gaming, Animation, VFX, Graphic & Web Institute</title>
+    <!-- Google Fonts + Font Awesome + Swiper for Slider -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Maac-Logo"></a>
+            </div>
+            <div class="menu-btn" id="menuBtn"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active-nav">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Slider -->
+    <section id="home" class="hero-slider">
+        <div class="swiper mainSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover;">
+                    <div class="slide-overlay"><div class="slide-content"><h2>Graphic Design <span style="color:#ffcd32;">Reimagined</span></h2><p>Typography, branding, UI/UX — build iconic portfolios.</p><a href="#courses" class="btn-primary">Explore Courses</a></div></div>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover;">
+                    <div class="slide-overlay"><div class="slide-content"><h2>Web & 3D Fusion</h2><p>Interactive 3D websites + immersive experiences. Learn Three.js, React.</p><a href="#courses" class="btn-primary">Start Now</a></div></div>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover;">
+                    <div class="slide-overlay"><div class="slide-content"><h2>VFX & Animation Studio</h2><p>Industry level compositing, Houdini, Nuke. Create cinematic magic.</p><a href="#contact" class="btn-outline">Enroll Today</a></div></div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="section">
+        <div class="container">
+            <h2 class="section-title">Master <span>Creative Disciplines</span></h2>
+            <p class="section-sub">Graphic Design • Web Development • 3D Art • VFX & Animation — all career-focused tracks.</p>
+            <div class="course-grid">
+                <div class="course-card"><div class="course-icon"><i class="fas fa-pen-fancy"></i></div><h3>Graphic Design</h3><p>Photoshop, Illustrator, InDesign, branding + motion graphics.</p><span class="course-tag">6 months | Portfolio</span></div>
+                <div class="course-card"><div class="course-icon"><i class="fas fa-code"></i></div><h3>Web Development</h3><p>HTML/CSS, JS, React, Node.js & modern frontend/backend.</p><span class="course-tag">8 months | Full Stack</span></div>
+                <div class="course-card"><div class="course-icon"><i class="fas fa-cube"></i></div><h3>3D & Motion</h3><p>Blender, Maya, 3D sculpting, lighting, animation for games.</p><span class="course-tag">7 months | Industry Ready</span></div>
+                <div class="course-card"><div class="course-icon"><i class="fas fa-film"></i></div><h3>VFX & Animation</h3><p>After Effects, Nuke, particle FX, compositing & character anim.</p><span class="course-tag">9 months | VFX Pro</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with Filter & Fullscreen Lightbox -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Student <span>Showcase</span></h2>
+            <p class="section-sub">Filter by category: Click on any project to view fullscreen & navigate with arrows.</p>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="3d">3D & Motion</button>
+                <button class="filter-btn" data-filter="vfx">VFX & Animation</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Why Fusion Arts -->
+    <section class="section" style="background: #0c0e16;">
+        <div class="container">
+            <h2 class="section-title">Why <span>MAAC</span></h2>
+            <div class="features-grid">
+                <div class="feature"><i class="fas fa-chalkboard-user"></i><h4>Live Mentorship</h4><p>Industry pros from top studios</p></div>
+                <div class="feature"><i class="fas fa-rocket"></i><h4>Real Projects</h4><p>Build client-ready portfolio</p></div>
+                <div class="feature"><i class="fas fa-trophy"></i><h4>Placement Support</h4><p>Top recruiters & career fairs</p></div>
+                <div class="feature"><i class="fas fa-vr-cardboard"></i><h4>High-end Labs</h4><p>24/7 creative workstation access</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form full spacing -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Let’s <span>Create Together</span></h2>
+            <p class="section-sub">Apply for a free demo class or career consultation.</p>
+            <div class="contact-flex">
+                <div class="contact-info">
+                    <h3><i class="fas fa-map-marker-alt" style="color:#ffcd32;"></i> Maac Kalkaji</h3>
+                    <p>Ground Floor, MAAC, 8, Guru Ravidas Marg, Balaji Estate, Kalkaji, New Delhi, Delhi 110019</p>
+                    <h3><i class="fas fa-phone-alt"></i> Contact</h3>
+                    <p>+91 928-923-4500</p>
+                    <h3><i class="fas fa-envelope"></i> Email</h3>
+                    <p>kalkaji@maacmail.com</p>
+                    <div style="margin-top: 32px;"><i class="fab fa-instagram fa-2x" style="margin-right: 20px;"></i><i class="fab fa-linkedin fa-2x" style="margin-right: 20px;"></i><i class="fab fa-dribbble fa-2x"></i></div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group"><input type="text" id="fullname" placeholder="Full name *" required></div>
+                        <div class="form-group"><input type="email" id="email" placeholder="Email address *" required></div>
+                        <div class="form-group"><select id="interest"><option>Graphic Design</option><option>Web Development</option><option>3D & Motion</option><option>VFX & Animation</option></select></div>
+                        <div class="form-group"><textarea rows="3" placeholder="Tell us about your creative goals..."></textarea></div>
+                        <button type="submit" class="btn-primary btn-block">Request Info →</button>
+                    </form>
+                    <div id="formMsg" style="margin-top: 20px; text-align:center;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:25px;">
+            <div><h3 style="color:#ffcd32;">MAAC</h3><p>Inspiring the next generation of digital creators.</p></div>
+            <div><p>© 2025 Fusion Arts — Graphic • Web • 3D • VFX</p></div>
+        </div>
+    </div>
+</footer>
+
+<!-- Fullscreen Lightbox with navigation -->
+<div id="fullscreenLightbox" class="fullscreen-lightbox">
+    <span class="close-lightbox" id="closeLightboxBtn">&times;</span>
+    <div class="nav-arrow prev-arrow" id="prevImageBtn"><i class="fas fa-chevron-left"></i></div>
+    <div class="nav-arrow next-arrow" id="nextImageBtn"><i class="fas fa-chevron-right"></i></div>
+    <img class="lightbox-image" id="lightboxImage" alt="Full project view">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    // --- SWIPER INIT ---
+    const swiper = new Swiper('.mainSwiper', {
+        loop: true,
+        autoplay: { delay: 4500, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinksEl = document.getElementById('navLinks');
+    if(menuBtn) menuBtn.addEventListener('click', () => navLinksEl.classList.toggle('show'));
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinksEl.classList.remove('show')));
+
+    // Active nav scroll
+    const sections = document.querySelectorAll("section[id]");
+    function setActiveLink() {
+        let current = "";
+        const scrollY = window.scrollY + 150;
+        sections.forEach(section => {
+            const top = section.offsetTop, h = section.offsetHeight;
+            if(scrollY >= top && scrollY < top + h) current = section.getAttribute("id");
+        });
+        document.querySelectorAll(".nav-links a").forEach(a => {
+            a.classList.remove("active");
+            if(a.getAttribute("href") === `#${current}`) a.classList.add("active");
+        });
+    }
+    window.addEventListener("scroll", setActiveLink);
+    setActiveLink();
+
+    // ---------- PROJECTS DATA (with categories) ----------
+    const projectsData = [
+        { title: "Neon City Poster", desc: "Vibrant typography & layout", category: "graphic", imgBig: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "3D Alien Creature", desc: "ZBrush & Maya sculpt", category: "3d", imgBig: "https://images.pexels.com/photos/788714/pexels-photo-788714.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/788714/pexels-photo-788714.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "Portfolio 2025", desc: "React + GSAP interactive", category: "web", imgBig: "https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "VFX Destruction", desc: "Houdini smoke sim", category: "vfx", imgBig: "https://images.pexels.com/photos/707582/pexels-photo-707582.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/707582/pexels-photo-707582.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "Motion Reel 2024", desc: "After Effects animation", category: "vfx", imgBig: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "3D Sci-fi Environment", desc: "Blender + Unreal", category: "3d", imgBig: "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "Brand Identity Kit", desc: "Logo & packaging design", category: "graphic", imgBig: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" },
+        { title: "E-Commerce App UI", desc: "Figma to React", category: "web", imgBig: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200", thumb: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" }
+    ];
+
+    let currentFilter = "all";
+    let currentGalleryItems = [];  // store filtered projects for lightbox navigation
+    let currentIndex = 0;
+
+    const gridContainer = document.getElementById('projectsGrid');
+    const lightbox = document.getElementById('fullscreenLightbox');
+    const lightboxImg = document.getElementById('lightboxImage');
+    const closeBtn = document.getElementById('closeLightboxBtn');
+    const prevBtn = document.getElementById('prevImageBtn');
+    const nextBtn = document.getElementById('nextImageBtn');
+
+    function renderProjects() {
+        const filtered = currentFilter === "all" ? projectsData : projectsData.filter(p => p.category === currentFilter);
+        currentGalleryItems = filtered;
+        gridContainer.innerHTML = "";
+        filtered.forEach((proj, idx) => {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+            card.innerHTML = `
+                <div class="project-img" style="background-image: url('${proj.thumb}');"></div>
+                <div class="project-info">
+                    <h4>${proj.title}</h4>
+                    <p>${proj.desc}</p>
+                    <span style="color:#ffcd32; font-size:0.75rem;"><i class="fas fa-expand-alt"></i> Click to open</span>
+                </div>
+            `;
+            card.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentIndex = idx;
+                openLightboxWithCurrent();
+            });
+            gridContainer.appendChild(card);
+        });
+    }
+
+    function openLightboxWithCurrent() {
+        if(currentGalleryItems.length === 0) return;
+        lightboxImg.src = currentGalleryItems[currentIndex].imgBig;
+        lightbox.classList.add('active');
+    }
+
+    function showNextImage() {
+        if(currentGalleryItems.length === 0) return;
+        currentIndex = (currentIndex + 1) % currentGalleryItems.length;
+        lightboxImg.src = currentGalleryItems[currentIndex].imgBig;
+    }
+    function showPrevImage() {
+        if(currentGalleryItems.length === 0) return;
+        currentIndex = (currentIndex - 1 + currentGalleryItems.length) % currentGalleryItems.length;
+        lightboxImg.src = currentGalleryItems[currentIndex].imgBig;
+    }
+
+    // filter buttons event
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentFilter = btn.getAttribute('data-filter');
+            renderProjects();
+        });
+    });
+
+    // lightbox controls
+    closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+    lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.classList.remove('active'); });
+    nextBtn.addEventListener('click', showNextImage);
+    prevBtn.addEventListener('click', showPrevImage);
+    document.addEventListener('keydown', (e) => {
+        if(!lightbox.classList.contains('active')) return;
+        if(e.key === 'ArrowRight') showNextImage();
+        if(e.key === 'ArrowLeft') showPrevImage();
+        if(e.key === 'Escape') lightbox.classList.remove('active');
+    });
+
+    renderProjects();
+
+    // Contact form
+    const form = document.getElementById('contactForm');
+    const msgDiv = document.getElementById('formMsg');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('fullname').value.trim();
+        const email = document.getElementById('email').value.trim();
+        if(!name || !email) {
+            msgDiv.innerHTML = '<span style="color:#ff5a5f;">⚠️ Name and email required.</span>';
+            return;
+        }
+        msgDiv.innerHTML = '<span style="color:#ffcd32; background:#1f212e; padding:10px 18px; border-radius:60px; display:inline-block;">🔥 Thanks ' + name + '! Our team will reach out within 24h.</span>';
+        form.reset();
+        setTimeout(() => msgDiv.innerHTML = '', 4500);
+        let toast = document.createElement('div');
+        toast.innerText = "✨ Enrollment request sent! We'll contact you soon.";
+        toast.style.position = 'fixed';
+        toast.style.bottom = '25px';
+        toast.style.right = '25px';
+        toast.style.background = '#ffcd32';
+        toast.style.color = '#0b0c15';
+        toast.style.fontWeight = 'bold';
+        toast.style.padding = '12px 24px';
+        toast.style.borderRadius = '60px';
+        toast.style.zIndex = '1000';
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+    });
+</script>
+</body>
+</html>
